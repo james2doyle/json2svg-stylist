@@ -114,7 +114,7 @@ export const generateJSONSVG = (json: string, theme: SVGTheme): string => {
 						let postQuoteIdx = nextTokenIdx + 1;
 						while (
 							tokens[postQuoteIdx] !== undefined &&
-							tokens[postQuoteIdx].trim() === ""
+							String(tokens[postQuoteIdx]).trim() === ""
 						) {
 							postQuoteIdx++;
 						}
