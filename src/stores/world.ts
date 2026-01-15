@@ -1,6 +1,6 @@
+import { generateJSONSVG } from "@/utils/svgGenerator";
 import { defineStore } from "pinia";
 import { computed, ref } from "vue";
-import { generateJSONSVG } from "@/utils/svgGenerator";
 
 export interface SVGTheme {
 	background: string;
@@ -110,10 +110,10 @@ export const THEMES: Record<ThemePreset, SVGTheme> = {
 		booleanColor: "#a6e22e",
 		nullColor: "#fd971f",
 		bracketColor: "#f8f8f2",
-		quoteColor: "#e6db7488",
+		quoteColor: "#e6db74",
 		lineNumberColor: "#90908a",
 		gradient:
-			"linear-gradient(to right,#272822 0%, #f92672 12.5%, #e6db74 25%, #ae81ff 37.5%, #a6e22e 50%, #fd971f 62.5%, #f8f8f2 75%, #e6db7488 87.5%, #90908a 100%)",
+			"linear-gradient(to right,#272822 0%, #f92672 12.5%, #e6db74 25%, #ae81ff 37.5%, #a6e22e 50%, #fd971f 62.5%, #f8f8f2 75%, #e6db74 87.5%, #90908a 100%)",
 		borderRadius: 4,
 		padding: 24,
 		fontSize: 14,
