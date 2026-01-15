@@ -1,6 +1,6 @@
 # json2svg-stylist
 
-An application that converts JSON input into beautifully styled SVG output with customizable syntax highlighting themes.
+Create stylish JSON code as SVG output with customizable syntax highlighting themes.
 
 ## Features
 
