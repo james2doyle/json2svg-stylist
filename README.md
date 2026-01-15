@@ -1,48 +1,100 @@
 # json2svg-stylist
 
-This template should help get you started developing with Vue 3 in Vite.
+An application that converts JSON input into beautifully styled SVG output with customizable syntax highlighting themes.
 
-## Recommended IDE Setup
+## Features
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- **JSON to SVG Conversion** - Transform any valid JSON into a styled SVG image
+- **Multiple Theme Presets** - Choose from built-in themes including:
+  - Minimal White
+  - Dracula
+  - One Dark
+  - Monokai
+  - Solarized Dark
+  - Nord
+  - GitHub Dark
+- **Customizable Styling** - Fine-tune fonts, colors, spacing, and dimensions
+- **Live Preview** - See changes in real-time as you edit
+- **Copy & Download** - Export your SVG for use anywhere
 
-## Recommended Browser Setup
+## Demo
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+Visit the live demo: [json2svg-stylist](https://james2doyle.github.io/json2svg-stylist/)
 
-## Type Support for `.vue` Imports in TS
+## Tech Stack
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+- **Vue 3** - Composition API with `<script setup>`
+- **TypeScript** - Strict type checking
+- **Vite 7** - Fast development and build
+- **Pinia** - State management
+- **Tailwind CSS v4** - Utility-first styling
+- **Vitest** - Unit testing
 
-## Customize configuration
+## Getting Started
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+### Prerequisites
 
-## Project Setup
+- Node.js 22.18.0+ (see `.nvmrc`)
+
+### Installation
 
 ```sh
+nvm use
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+### Development
+
+Start the development server with hot reload:
 
 ```sh
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
+### Build
+
+Type-check and build for production:
 
 ```sh
 npm run build
 ```
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+The production build outputs to the `docs/` directory for GitHub Pages deployment.
+
+### Testing
+
+Run unit tests:
 
 ```sh
 npm run test:unit
 ```
+
+### Formatting
+
+Format code with Biome:
+
+```sh
+npm run format
+```
+
+## Project Structure
+
+```
+src/
+├── main.ts              # Application entry point
+├── App.vue              # Root component
+├── assets/
+│   └── main.css         # Global styles (Tailwind CSS v4)
+├── components/
+│   ├── ControlPanel.vue # Theme and style controls
+│   ├── JSONInput.vue    # JSON editor
+│   └── SVGPreview.vue   # Live SVG preview
+├── stores/
+│   └── world.ts         # Pinia store (themes, settings)
+└── utils/
+    └── svgGenerator.ts  # Core SVG generation logic
+```
+
+## License
+
+MIT
